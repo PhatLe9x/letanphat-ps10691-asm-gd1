@@ -28,3 +28,9 @@ ol
     margin: 0px;
     padding:0px;
 }
+.welcomebox{
+    display: block;
+    padding: 8px;
+    color: #fff;
+    float: right;
+}

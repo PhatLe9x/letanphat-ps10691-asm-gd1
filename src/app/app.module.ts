@@ -22,6 +22,13 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 // import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
 // import { faStar, faStarHalf, faStarHalfAlt } from '@fortawesome/free-solid-svg-icons';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import { LoginComponent } from './login/login.component';
+import { SocialLoginModule, SocialAuthServiceConfig } from 'angularx-social-login';
+import {
+  GoogleLoginProvider,
+  FacebookLoginProvider,
+  AmazonLoginProvider,
+} from 'angularx-social-login';
 
 
 @NgModule({
@@ -31,7 +38,8 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
     HeaderComponent,
     FooterComponent,
     HomeComponent,
-    ProductDetailComponent
+    ProductDetailComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -43,11 +51,39 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
     MatTabsModule,
     MatRadioModule,
     MatCheckboxModule,
-    MDBBootstrapModule.forRoot()
+    MDBBootstrapModule.forRoot(),
+    SocialLoginModule
     // FontAwesomeModule
   ],
-  providers: [ProductsService],
+  providers: [
+    ProductsService,
+    {
+      provide: 'SocialAuthServiceConfig',
+      useValue: {
+        autoLogin: true,
+        providers: [
+          {
+            id: GoogleLoginProvider.PROVIDER_ID,
+            provider: new GoogleLoginProvider(
+              '579450100545-dhq3rj6gendi4iigssa8polk12e7tmsl.apps.googleusercontent.com'
+            ),
+          },
+          {
+            id: FacebookLoginProvider.PROVIDER_ID,
+            provider: new FacebookLoginProvider('561602290896109'),
+          },
+          {
+            id: AmazonLoginProvider.PROVIDER_ID,
+            provider: new AmazonLoginProvider(
+              'amzn1.application-oa2-client.f074ae67c0a146b6902cc0c4a3297935'
+            ),
+          },
+        ],
+      } as SocialAuthServiceConfig,
+    }
+  ],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { 
 }
