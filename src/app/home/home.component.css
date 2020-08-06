@@ -1,0 +1,75 @@
+.wrapper{
+    *zoom: 1;   
+    margin: 0 auto;
+    padding: 0 15px;
+}
+.inner{
+    margin-top: 5px;
+}
+.home-section-head{
+    padding: 10px;
+    background: #fff;
+    border-bottom: 1px solid #f0f0f0;
+}
+.home-section-body{
+    background: #fff;
+    padding-bottom: 15px;
+}
+.mg-left-0 {
+    margin-left: 0 !important;
+}
+.product-item {
+    width: 280px;
+    padding: 18px;
+    margin: 5px;
+    background: #fff;
+    border: 1px solid #f0f0f0;
+  }
+  .product-item:hover {
+    border: 1px solid #cc5200;
+ }
+  .product-img {
+    position: relative;
+    margin-bottom: 5px;
+    min-height: 190px;
+}  
+.product-item .product-title a {
+    display: inline-block;
+    color: #333333;
+    min-height: 44px;
+}
+.product-price > span.current-price {
+    color: #cc5200;
+}
+.grid__item {
+    box-sizing: border-box;
+    float: left;
+    min-height: 1px;
+    padding-left: 30px;
+    vertical-align: top;
+    width: 100%;
+}
+
+@media only screen and (min-width: 769px){
+    .grid-uniform .large--one-half:nth-child(2n+1), .grid-uniform .large--one-third:nth-child(3n+1), .grid-uniform .large--one-quarter:nth-child(4n+1), .grid-uniform .large--one-fifth:nth-child(5n+1), .grid-uniform .large--one-sixth:nth-child(6n+1), .grid-uniform .large--two-sixths:nth-child(3n+1), .grid-uniform .large--three-sixths:nth-child(2n+1), .grid-uniform .large--two-eighths:nth-child(4n+1), .grid-uniform .large--four-eighths:nth-child(2n+1), .grid-uniform .large--five-tenths:nth-child(2n+1), .grid-uniform .large--one-twelfth:nth-child(12n+1), .grid-uniform .large--two-twelfths:nth-child(6n+1), .grid-uniform .large--three-twelfths:nth-child(4n+1), .grid-uniform .large--four-twelfths:nth-child(3n+1), .grid-uniform .large--six-twelfths:nth-child(2n+1) {
+        clear: both;
+    }
+    .pd-left0 {
+        padding-left: 0 !important;
+    }
+}
+
+@media only screen and (min-width: 769px)
+{
+    .large--one-fifth {
+        width: 20%;
+    } 
+}
+
+@media (min-width: 768px)
+{
+.product-title {
+    height: 45px !important;
+    overflow: hidden;
+    }
+}

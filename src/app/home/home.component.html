@@ -1,0 +1,111 @@
+<div class="container-fluid">
+    <div class="inner">
+        <div class="home-section-head">
+            <h2>
+                SẢN PHẨM KHUYẾN MÃI HOT NHẤT
+            </h2>
+        </div>
+        <div class="home-section-body">
+            <div class="d-sm-flex flex-sm-wrap container-fluid">
+                <div class="product-item" *ngFor="let item of items">
+         
+                    <div class="product-img">
+                        <!-- <ngx-image-zoom
+                        [thumbImage]="item.picture"
+                        [fullImage]="item.fullimage"
+                        [magnification]="1"
+                        [enableScrollZoom]="true"
+                        [enableLens]="true"
+                        [lensWidth]="200"
+                    ></ngx-image-zoom> -->
+                           <a routerLink="/details/{{item.id}}"> <img src="{{item.picture}}" alt="">  </a>
+                    </div>
+        
+                    <div class="product-item-info">
+                        <div class="product-title">
+                            <a routerLink="/details/{{item.id}}">{{item.name}}</a>
+                        </div>
+        
+                        <div class="product-price clearfix">
+                            <span class="current-price">{{item.price}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>   
+    
+    <div class="inner">
+        <div class="home-section-head">
+            <h2>
+                LAPTOP GAMING GIÁ TỐT
+            </h2>
+        </div>
+        <div class="home-section-body">
+            <div class="d-sm-flex flex-sm-wrap">
+                <div class="product-item" *ngFor="let item of laptopGamings">
+         
+                    <div class="product-img">
+                        <!-- <ngx-image-zoom
+                        [thumbImage]="item.picture"
+                        [fullImage]="item.fullimage"
+                        [magnification]="1"
+                        [enableScrollZoom]="true"
+                        [enableLens]="true"
+                        [lensWidth]="200"
+                    ></ngx-image-zoom> -->
+                           <a routerLink="/details/{{item.id}}"> <img src="{{item.picture}}" alt="">  </a>
+                    </div>
+        
+                    <div class="product-item-info">
+                        <div class="product-title">
+                            <a routerLink="/details/{{item.id}}">{{item.name}}</a>
+                        </div>
+        
+                        <div class="product-price clearfix">
+                            <span class="current-price">{{item.price}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+
+    <div class="inner">
+        <div class="home-section-head">
+            <h2>
+                LAPTOP NEW ARRIVAL
+            </h2>
+        </div>
+        <div class="home-section-body">
+            <div class="d-sm-flex flex-sm-wrap">
+                <div class="product-item" *ngFor="let item of laptopNews">
+         
+                    <div class="product-img">
+                        <!-- <ngx-image-zoom
+                        [thumbImage]="item.picture"
+                        [fullImage]="item.fullimage"
+                        [magnification]="1"
+                        [enableScrollZoom]="true"
+                        [enableLens]="true"
+                        [lensWidth]="200"
+                    ></ngx-image-zoom> -->
+                           <a routerLink="/details/{{item.id}}"> <img src="{{item.picture}}" alt="">  </a>
+                    </div>
+        
+                    <div class="product-item-info">
+                        <div class="product-title">
+                            <a routerLink="/details/{{item.id}}">{{item.name}}</a>
+                        </div>
+        
+                        <div class="product-price clearfix">
+                            <span class="current-price">{{item.price}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+
+
+</div>
