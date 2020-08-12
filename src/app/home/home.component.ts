@@ -15,7 +15,7 @@ export class HomeComponent implements OnInit {
   constructor(private productsServices: ProductsService) {
     this.items = productsServices.getProducts().slice(0,5);
     this.laptopGamings = productsServices.getProducts().slice(5,10);
-    this.laptopNews = productsServices.getProducts().slice(2,7);
+    this.laptopNews = productsServices.getProducts().slice(10,15);
     // this.cartService
     //   .getItems()
     //   .subscribe((items: Product[]) => {
